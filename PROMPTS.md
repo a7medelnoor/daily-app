@@ -14,6 +14,12 @@ Every prompt used in the workshop, in order. Copy them as they are, then change 
 
 ---
 
+## Before you build
+
+Planning and design prompts (ChatGPT, Claude, Gemini, Google Stitch, UX Pilot) are in [docs/PLANNING.md](docs/PLANNING.md).
+
+---
+
 ## Warm-up · Tool Arena
 
 Paste the same prompt into one cloud tool and one local tool. Compare the results.
@@ -35,7 +41,7 @@ Vote on: which one ran first, which one looks better, which one you could keep b
 No prompt. Run these commands:
 
 ```bash
-git clone https://github.com/YOUR-ORG/daily-app.git
+git clone https://github.com/a7medelnoor/daily-app.git
 cd daily-app
 git checkout 00-start
 npm install
@@ -210,6 +216,12 @@ in 3 bullets.
 ```
 
 Final branch: `main`
+
+---
+
+## Architecture and security
+
+Test prompt: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Security review prompt: [docs/SECURITY.md](docs/SECURITY.md).
 
 ---
 

@@ -1,6 +1,6 @@
 # Daily
 
-A habit tracker you build with AI in the **Your First App, Built With AI** workshop by Infinia Academy.
+A habit tracker you build with AI in the **Your First App, Built With AI** workshop by [Ahmed Elnoor](https://www.ahmedelnoor.com) · [Infinia Software](https://www.infiniasoftware.ai).
 
 Expo SDK 54 · Expo Router · Supabase (auth + database) · Email, Google and Apple sign-in
 
@@ -26,7 +26,7 @@ git checkout 02-login   # jump to any checkpoint
 You need Node.js 20 or newer, Git, and the **Expo Go** app on your phone.
 
 ```bash
-git clone https://github.com/YOUR-ORG/daily-app.git
+git clone https://github.com/a7medelnoor/daily-app.git
 cd daily-app
 git checkout 00-start
 npm install
@@ -46,7 +46,10 @@ From `02-login` onwards you also need a `.env` file: copy `.env.example` and fol
 | [PROMPTS.md](PROMPTS.md) | Every prompt used in the workshop, in order |
 | [docs/BRIEF.md](docs/BRIEF.md) | The one-page product brief. The AI reads it before building |
 | [AGENTS.md](AGENTS.md) / [CLAUDE.md](CLAUDE.md) | Project rules for Codex, Antigravity and Claude Code |
-| [docs/GAME.md](docs/GAME.md) | XP, badges and lifelines |
+| [docs/PLANNING.md](docs/PLANNING.md) | Plan and design prompts: ChatGPT, Claude, Gemini, Stitch, UX Pilot, Figma |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | MVVM, project structure, testing |
+| [docs/SECURITY.md](docs/SECURITY.md) | Five security layers, attacks and defences |
+| [docs/GAME.md](docs/GAME.md) | XP, badges, quizzes and lifelines |
 | [docs/SETUP-SUPABASE.md](docs/SETUP-SUPABASE.md) | Supabase, Google and Apple provider setup |
 | [docs/ACCOUNTS.md](docs/ACCOUNTS.md) | Apple Developer, Google Play and Expo accounts |
 | [docs/STORE-CHECKLIST.md](docs/STORE-CHECKLIST.md) | Everything to check before you submit |

@@ -14,6 +14,7 @@ export default function HabitDetail() {
   const { habits, doneDays, deleteHabit } = useHabits();
   const [confirming, setConfirming] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const habit = habits.find((h) => h.id === id);
 
   if (!habit) return <EmptyState title="Habit not found" body="It may have been deleted." />;
@@ -23,8 +24,14 @@ export default function HabitDetail() {
 
   async function remove() {
     setBusy(true);
-    await deleteHabit(habit!.id);
-    router.back();
+    setError(null);
+    try {
+      await deleteHabit(habit!.id);
+      router.back();
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Could not delete. Try again.');
+      setBusy(false);
+    }
   }
 
   return (
@@ -52,6 +59,7 @@ export default function HabitDetail() {
       </View>
 
       <View style={styles.spacer} />
+      {error ? <Text style={styles.error}>{error}</Text> : null}
       {confirming ? (
         <View style={styles.confirm}>
           <Text style={styles.confirmText}>Delete "{habit.name}" and its history?</Text>
@@ -80,6 +88,7 @@ const styles = StyleSheet.create({
   dotDone: { backgroundColor: colors.accent },
   dayLabel: { fontSize: 12, color: colors.muted },
   spacer: { flex: 1 },
+  error: { fontSize: 14, color: colors.danger, textAlign: 'center' },
   confirm: { gap: space.sm },
   confirmText: { fontSize: 15, color: colors.text, textAlign: 'center' },
   confirmRow: { flexDirection: 'row', gap: space.sm },

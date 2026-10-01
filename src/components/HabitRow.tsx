@@ -1,3 +1,4 @@
+import * as Haptics from 'expo-haptics';
 import { Link } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { dayKey, streak } from '../lib/dates';
@@ -13,7 +14,10 @@ export function HabitRow({ habit, days, onToggle }: Props) {
   return (
     <View style={styles.row}>
       <Pressable
-        onPress={onToggle}
+        onPress={() => {
+          Haptics.impactAsync(done ? Haptics.ImpactFeedbackStyle.Light : Haptics.ImpactFeedbackStyle.Medium);
+          onToggle();
+        }}
         accessibilityRole="checkbox"
         accessibilityState={{ checked: done }}
         accessibilityLabel={`Mark ${habit.name} done today`}

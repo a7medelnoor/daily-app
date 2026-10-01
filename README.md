@@ -49,6 +49,7 @@ From `02-login` onwards you also need a `.env` file: copy `.env.example` and fol
 | [docs/GAME.md](docs/GAME.md) | XP, badges and lifelines |
 | [docs/SETUP-SUPABASE.md](docs/SETUP-SUPABASE.md) | Supabase, Google and Apple provider setup |
 | [docs/ACCOUNTS.md](docs/ACCOUNTS.md) | Apple Developer, Google Play and Expo accounts |
+| [docs/STORE-CHECKLIST.md](docs/STORE-CHECKLIST.md) | Everything to check before you submit |
 
 ## License
 

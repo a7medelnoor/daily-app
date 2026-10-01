@@ -1,10 +1,5 @@
-// Dates are stored as local calendar days ("2026-10-01"), never as UTC timestamps,
-// so a check-in at 1am in Dubai counts for the right day.
 export function dayKey(date: Date = new Date()): string {
-  const y = date.getFullYear();
-  const m = String(date.getMonth() + 1).padStart(2, '0');
-  const d = String(date.getDate()).padStart(2, '0');
-  return `${y}-${m}-${d}`;
+  return date.toISOString().slice(0, 10);
 }
 
 export function lastDays(count: number, from: Date = new Date()): string[] {

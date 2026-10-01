@@ -12,6 +12,7 @@ export default function Today() {
     <>
       <Stack.Screen
         options={{
+          headerTitle: `Today · ${habits[0].name}`,
           headerLeft: () => (
             <Link href="/settings" asChild>
               <Pressable accessibilityLabel="Settings" hitSlop={12}>

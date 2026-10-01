@@ -39,3 +39,15 @@ Docs: https://docs.expo.dev/eas/index.md
 - If `ios/` and `android/` directories do not exist, they are generated (Continuous Native Generation). Never create or edit them by hand — configure native behavior in `app.json` and config plugins.
 - Expo Go only includes its bundled native modules. After adding a library with native code, the app needs a development build: `npx expo run:ios|android` locally, or `eas build --profile development`.
 - Prefer recommended Expo modules over third-party libraries, and check your available skills before adding dependencies. Docs: https://docs.expo.dev/versions/latest/index.md
+
+## This project: Daily
+
+Daily is a habit tracker built live in the "Your First App, Built With AI" workshop. The product brief is `docs/BRIEF.md`; read it before building any screen.
+
+- **SDK is pinned to Expo SDK 54** so the app runs in the Expo Go app from the App Store and Google Play. Do not upgrade the SDK.
+- Screens live in `src/app/`. Shared code lives in `src/lib/` and `src/components/`.
+- Colors and spacing come from `src/theme.ts`. Never hard-code a hex color in a screen.
+- Dates are local calendar days built with `dayKey()` in `src/lib/dates.ts`. Never use `toISOString()` for a day.
+- Supabase: only `EXPO_PUBLIC_SUPABASE_URL` and the publishable key may appear in app code. Secret keys only ever live in Supabase Edge Functions.
+- Every table has row-level security. A new table without policies is a bug.
+- Keep changes small: one screen or one feature per change. Explain what you changed in three bullets or fewer.

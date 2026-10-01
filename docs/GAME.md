@@ -13,6 +13,7 @@ You play solo or in teams of two. Every mission earns XP. The leaderboard is on 
 | 3 · Save data | Vault | 300 |
 | Boss Fight | Bug Slayer | 150 per bug, 450 total |
 | 4 · Store-ready | Store-Ready | 300 |
+| Pop quizzes ×3 | Quiz Master | 25 per correct answer, 225 total |
 
 ## Bonuses
 

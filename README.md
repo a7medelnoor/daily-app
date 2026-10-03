@@ -8,14 +8,14 @@ Expo SDK 54 · Expo Router · Supabase (auth + database) · Email, Google and Ap
 
 Each branch is a working checkpoint of the reference app. Stuck on your own app? Compare with the matching branch.
 
-| Branch | What is done | Mission |
+| Branch | What is done | Workshop mission |
 |---|---|---|
-| `00-start` | Empty app that runs on your phone, brief, rules, prompts | 0 · First Launch |
-| `01-screens` | Today, New habit, Habit detail (data in memory) | 1 · Screens |
-| `02-login` | Supabase auth: email, Google, Apple, Settings, sign out | 2 · Login |
-| `03-save-data` | Tables with row-level security, data saved in Supabase | 3 · Save data |
+| `00-start` | Empty app that runs on your phone, brief, rules, prompts | 2 · Setup |
+| `01-screens` | Today, New habit, Habit detail (data in memory) | 3 · Screens |
+| `02-login` | Supabase auth: email, Google, Apple, Settings, sign out | 4 · Login |
+| `03-save-data` | Tables with row-level security, data saved in Supabase | 5 · Save data |
 | `boss-fight` | `03-save-data` with three planted bugs | Boss Fight |
-| `main` | Account deletion, haptics, store-ready config | 4 · Store-ready |
+| `main` | Account deletion, haptics, store-ready config | 6 · Store-ready |
 
 ```bash
 git checkout 02-login   # jump to any checkpoint

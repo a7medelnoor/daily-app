@@ -6,7 +6,7 @@ Expo SDK 54 · Expo Router · Supabase (auth + database) · Email, Google and Ap
 
 ## Branches
 
-Each mission has a checkpoint branch. Stuck? Jump to the next one and keep going.
+Each branch is a working checkpoint of the reference app. Stuck on your own app? Compare with the matching branch.
 
 | Branch | What is done | Mission |
 |---|---|---|
@@ -21,7 +21,26 @@ Each mission has a checkpoint branch. Stuck? Jump to the next one and keep going
 git checkout 02-login   # jump to any checkpoint
 ```
 
-## Quick start
+## Build your own app
+
+In the workshop you build **your own idea**. Daily is the reference: each branch shows a working version of one mission.
+
+1. Install the tools: [docs/SETUP-TOOLS.md](docs/SETUP-TOOLS.md)
+2. Write your brief with prompt P.1 in [PROMPTS.md](PROMPTS.md), using [docs/BRIEF-TEMPLATE.md](docs/BRIEF-TEMPLATE.md)
+3. Start your repo from the starter:
+
+```bash
+git clone -b 00-start --single-branch https://github.com/a7medelnoor/daily-app.git my-app
+cd my-app
+rm -rf .git
+git init -b main
+git add . && git commit -m "Start from the workshop starter"
+gh repo create my-app --private --source=. --push
+```
+
+4. Replace `docs/BRIEF.md` with your brief and follow the missions in [PROMPTS.md](PROMPTS.md).
+
+## Run the reference app
 
 You need Node.js 20 or newer, Git, and the **Expo Go** app on your phone.
 
@@ -43,13 +62,14 @@ From `02-login` onwards you also need a `.env` file: copy `.env.example` and fol
 
 | File | Why |
 |---|---|
-| [PROMPTS.md](PROMPTS.md) | Every prompt used in the workshop, in order |
+| [PROMPTS.md](PROMPTS.md) | Every prompt used in the workshop, written for your own app |
 | [docs/BRIEF.md](docs/BRIEF.md) | The one-page product brief. The AI reads it before building |
 | [AGENTS.md](AGENTS.md) / [CLAUDE.md](CLAUDE.md) | Project rules for Codex, Antigravity and Claude Code |
 | [docs/PLANNING.md](docs/PLANNING.md) | Plan and design prompts: ChatGPT, Claude, Gemini, Stitch, UX Pilot, Figma |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | MVVM, project structure, testing |
 | [docs/SECURITY.md](docs/SECURITY.md) | Five security layers, attacks and defences |
-| [docs/GAME.md](docs/GAME.md) | XP, badges, quizzes and lifelines |
+| [docs/SETUP-TOOLS.md](docs/SETUP-TOOLS.md) | Node, Git, GitHub CLI, AI agents, Expo Go |
+| [docs/BRIEF-TEMPLATE.md](docs/BRIEF-TEMPLATE.md) | Blank brief for your own app |
 | [docs/SETUP-SUPABASE.md](docs/SETUP-SUPABASE.md) | Supabase, Google and Apple provider setup |
 | [docs/ACCOUNTS.md](docs/ACCOUNTS.md) | Apple Developer, Google Play and Expo accounts |
 
